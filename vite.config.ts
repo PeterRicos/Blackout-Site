@@ -3,8 +3,11 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({command}) => {
   return {
+    // GitHub Pages serves project sites from /<repo>/, so builds need that base path.
+    // Local dev stays at "/" and other hosts can override with VITE_BASE_PATH.
+    base: process.env.VITE_BASE_PATH ?? (command === 'build' ? '/Blackout-Site/' : '/'),
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

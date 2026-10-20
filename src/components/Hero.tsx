@@ -15,6 +15,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { saveUserVideo, getSavedUserVideo } from '../utils/videoStorage';
+import { asset } from '../utils/asset';
 
 interface HeroProps {
   onNavigate: (page: ActivePage) => void;
@@ -27,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({
   onOpenClaim,
   onInspectItem
 }) => {
-  const [videoSrc, setVideoSrc] = useState<string>('/reel.mp4');
+  const [videoSrc, setVideoSrc] = useState<string>(asset('/reel.mp4'));
   const [isCustomLoaded, setIsCustomLoaded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
@@ -288,7 +289,7 @@ export const Hero: React.FC<HeroProps> = ({
               loop
               muted={isMuted}
               playsInline
-              poster="/hero-vault-poster.jpg"
+              poster={asset('/hero-vault-poster.jpg')}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
               onClick={togglePlay}
             />

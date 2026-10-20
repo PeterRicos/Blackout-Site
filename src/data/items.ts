@@ -1,6 +1,7 @@
 import { VaultItem } from '../types';
+import { resolveAssetPaths } from '../utils/asset';
 
-export const HERO_ITEM: VaultItem = {
+const HERO_ITEM_RAW: VaultItem = {
   "id": "air-jordan-1-retro-high-og-555088-404",
   "sku": "555088-404",
   "title": "Air Jordan 1 Retro High OG",
@@ -28,7 +29,7 @@ export const HERO_ITEM: VaultItem = {
   "isRecent": false
 };
 
-export const TRAVIS_SCOTT_ITEM: VaultItem = {
+const TRAVIS_SCOTT_ITEM_RAW: VaultItem = {
   "id": "air-jordan-6-retro-travis-scott-british-khaki-dh0690-200",
   "sku": "DH0690-200",
   "title": "Air Jordan 6 Retro Travis Scott British Khaki",
@@ -57,7 +58,7 @@ export const TRAVIS_SCOTT_ITEM: VaultItem = {
   "isRecent": false
 };
 
-export const VAULT_ITEMS: VaultItem[] = [
+const VAULT_ITEMS_RAW: VaultItem[] = [
   {
     "id": "yeezy-boost-360-v2-cinder-fy2903",
     "sku": "FY2903",
@@ -2569,7 +2570,7 @@ export const VAULT_ITEMS: VaultItem[] = [
   }
 ];
 
-export const CATEGORY_BANNERS = {
+const CATEGORY_BANNERS_RAW = {
   clothing: {
     title: 'CLOTHING & ACCESSORIES',
     category: 'STREET WEAR',
@@ -2621,3 +2622,9 @@ export const BRAND_STATS = [
 
 export const VAULT_PHONE = '+1 (212) 804-8842';
 export const VAULT_SMS_NUM = '+12128048842';
+
+// Image paths above are authored root-relative; resolve them against the deploy base.
+export const HERO_ITEM = resolveAssetPaths(HERO_ITEM_RAW);
+export const TRAVIS_SCOTT_ITEM = resolveAssetPaths(TRAVIS_SCOTT_ITEM_RAW);
+export const VAULT_ITEMS = resolveAssetPaths(VAULT_ITEMS_RAW);
+export const CATEGORY_BANNERS = resolveAssetPaths(CATEGORY_BANNERS_RAW);
