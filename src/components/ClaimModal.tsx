@@ -66,7 +66,7 @@ export const ClaimModal: React.FC<ClaimModalProps> = ({ item, isOpen, onClose })
       let isInvoice = false;
 
       if (isClaimRequest) {
-        replyText = `Locked in hand! ${item.title} [Size ${selectedSize}] is verified pristine deadstock (100% pass on UV + stitch check). Vault price locked at ${item.estimatedValue || '$380'}. Dispatch ready via insured FedEx 2-Day. Here is your private vault claim link:`;
+        replyText = `Locked in hand! ${item.title} [Size ${selectedSize}] is verified pristine deadstock (100% pass on UV + stitch check). Pricing is confirmed directly upon claim review. Dispatch ready via insured FedEx 2-Day. Here is your private vault claim link:`;
         isInvoice = true;
       } else {
         replyText = `Got it. We have 1 unit of SKU ${item.sku} reserved on your line for 20 minutes. Would you like us to generate the express checkout link?`;
