@@ -1,0 +1,6 @@
+{
+  "name": "Random Stock Archive",
+  "description": "The underground friends & family sneaker vault and deadstock archive. Authentic grail sneakers, streetwear, and collectibles claimed directly by call or text.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
