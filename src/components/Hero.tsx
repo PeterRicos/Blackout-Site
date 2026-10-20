@@ -27,7 +27,7 @@ export const Hero: React.FC<HeroProps> = ({
   onOpenClaim,
   onInspectItem
 }) => {
-  const [videoSrc, setVideoSrc] = useState<string>('/hero-video.mp4');
+  const [videoSrc, setVideoSrc] = useState<string>('/reel.mp4');
   const [isCustomLoaded, setIsCustomLoaded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
